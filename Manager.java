@@ -16,7 +16,7 @@ public class Manager extends Person{
 
     public static void writeManagers(){
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("projektGui2/managers"));
+            BufferedWriter writer = new BufferedWriter(new FileWriter("managers"));
             for (Manager m: managers) {
                 writer.write("MANAGER\n");
                 writer.write(m.name+";"+m.surname+";"+m.pesel+";"+m.password+";"+m.favouriteColor);
@@ -31,7 +31,7 @@ public class Manager extends Person{
         LinkedList<Manager> m = new LinkedList<>();
         BufferedReader reader = null;
         try {
-            reader = new BufferedReader(new FileReader("projektGui2/managers"));
+            reader = new BufferedReader(new FileReader("managers"));
             String line;
             while ((line = reader.readLine()) != null) {
                 if (line.equals("MANAGER")) {

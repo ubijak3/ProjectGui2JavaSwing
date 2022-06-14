@@ -24,7 +24,7 @@ public class AddNewProjectWindow extends JFrame {
     public void addNewProject(String pNameC, String pCommentC){
         try {
             SessionTimer.resetTime();
-            BufferedWriter writer = new BufferedWriter(new FileWriter("./projects",true));
+            BufferedWriter writer = new BufferedWriter(new FileWriter("projects",true));
             writer.write("PROJECT\n");
             writer.write(pNameC+";"+pCommentC+";"+"PLANNED\n");
             writer.close();

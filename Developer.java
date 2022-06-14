@@ -20,7 +20,7 @@ public class Developer extends Person {
 
     public static void writeDevelopers(){
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("projektGui2/developers"));
+            BufferedWriter writer = new BufferedWriter(new FileWriter("developers"));
             for (Developer d: developers) {
                 writer.write("DEVELOPER\n");
                 writer.write(d.name+";"+d.surname+";"+d.pesel+";"+d.password+";"+ d.favouriteColor+"\n");
@@ -35,7 +35,7 @@ public class Developer extends Person {
         LinkedList<Developer> d = new LinkedList<>();
         BufferedReader reader = null;
         try {
-            reader = new BufferedReader(new FileReader("projektGui2/developers"));
+            reader = new BufferedReader(new FileReader("developers"));
             String line;
             while ((line = reader.readLine()) != null) {
                 if (line.equals("DEVELOPER")) {

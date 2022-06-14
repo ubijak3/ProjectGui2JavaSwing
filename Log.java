@@ -7,7 +7,7 @@ import java.util.Date;
 public class Log {
     public static void writeLog(Person who, String what){
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("projektGui2/log",true));
+            BufferedWriter writer = new BufferedWriter(new FileWriter("log",true));
             SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
             Date date = new Date(System.currentTimeMillis());
             writer.write(date + " " + who + " " + what);

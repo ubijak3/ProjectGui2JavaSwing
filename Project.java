@@ -58,7 +58,7 @@ public class Project {
         LinkedList<Project> p = new LinkedList<Project>();
         BufferedReader reader = null;
         try {
-            reader = new BufferedReader(new FileReader("projektGui2/projects"));
+            reader = new BufferedReader(new FileReader("projects"));
             String line;
             while((line = reader.readLine()) != null) {
                 if(line.equals("PROJECT")){
@@ -89,7 +89,7 @@ public class Project {
         LinkedList<Project> p = new LinkedList<Project>();
         BufferedReader reader = null;
         try {
-            reader = new BufferedReader(new FileReader("projektGui2/projects"));
+            reader = new BufferedReader(new FileReader("projects"));
             String line;
             while((line = reader.readLine()) != null) {
                 if(line.equals("PROJECT")){
@@ -134,7 +134,7 @@ public class Project {
 
     public static void writeProjects(){
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("projektGui2/projects"));
+            BufferedWriter writer = new BufferedWriter(new FileWriter("projects"));
             for (Project p : projectList) {
                 writer.write("PROJECT\n");
                 String status = "";
@@ -153,7 +153,7 @@ public class Project {
 
     public void writeDeveloperToProject(){
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("projektGui2/developerInProject"));
+            BufferedWriter writer = new BufferedWriter(new FileWriter("developerInProject"));
             for (Project p : projectList) {
                 for (Developer d : p.projectDeveloperTeam) {
                     writer.write("DEVINPROJ\n");
@@ -168,7 +168,7 @@ public class Project {
 
     public static void readDeveloperInProject(){
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("projektGui2/developerInProject"));
+            BufferedReader reader = new BufferedReader(new FileReader("developerInProject"));
             String line;
             while ((line = reader.readLine()) != null){
                 if(line.equals("DEVINPROJ")){
